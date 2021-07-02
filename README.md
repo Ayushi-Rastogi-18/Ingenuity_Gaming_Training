@@ -1,2 +1,5 @@
 # Ingenuity_Gaming_Training
- Here will be my all assignments.
+Hello! everyone
+ Here I will upload my all assignments.
+ Open to have suggestions.
+
