@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url("numberbg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* width: 2437px; height: 3966px; */
+            color: white;
+            text-align: center;
+        }
+
+        #container {
+            border: 5px solid rgb(107, 8, 8);
+            width: 50%;
+            background-color: #bddace;
+            color: rgb(107, 8, 8);
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 50px;
+        }
+
+        .myButton {
+            color: white;
+            background-color: rgb(107, 8, 8);
+            border: 2px solid white;
+            padding: 5px 20px;
+            border-radius: 12px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #main_div {
+            visibility: hidden;
+        }
+
+        .wrong {
+            background-color: rgb(214, 22, 22);
+            /* padding: 5px 20px;*/
+            margin: 50px 100px;
+            justify-content: center;
+            border: 2px solid rgb(214, 22, 22);
+            color: white;
+        }
+
+        .success {
+            background-color: rgb(108, 214, 46);
+            /* padding: 5px 20px;*/
+            margin: 50px 100px;
+            justify-content: center;
+            border: 2px solid rgb(108, 214, 46);
+            color: rgb(107, 8, 8);
+        }
+
+        h1 {
+            background-color: #26a570;
+            font-family: 'Otomanopee One', sans-serif;
+            font-weight: bold;
+        }
+         #display{
+            font-family: 'Otomanopee One', sans-serif;
+         }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Number Guessing Game</h1>
+        <h3>How to Play?</h3>
+        <p>You have to guess the number between 1-100 .We will select a random number between 1 and 100 and you will get
+            only 10 chances to guess it right.<br>Let's see you can guess it right or not!<br><b>BEST OF LUCK!</b></p>
+        <br>
+        <button type="button" id="start" class="myButton" onclick="start()">Start</button>
+        <button type="button" id="reset" class="myButton" onclick="window.location.reload()">Refresh</button>
+
+        <div id="main_div">
+            <label for="inputguess">Enter your guessed number:</label>
+            <input type="text" class="inputguess" id="usernum">
+            <button id="btn" class="myButton">Check</button>
+            <div id="display" class=""></div>
+            <div id="guesses">Your guesse: </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    let num2 = Math.floor(Math.random() * 100) + 1;
+    console.log(num2);
+    let input1 = document.getElementById("usernum");  //user input i.e a number
+    let btn = document.getElementById("btn");         //check button
+    let msg = document.getElementById("display");     //for displaying message
+    let btn_start = document.getElementById("start"); //start button
+    let btn_reset = document.getElementById("reset"); //reset button
+    let main_div = document.getElementById("main_div"); //main_div
+    let guesses = document.getElementById("guesses");
+    let count = 0;
+    let chances = 10;
+
+    function start() {
+        main_div.style.visibility = "visible";
+    }
+    btn.addEventListener("click", () => {
+        let num1 = input1.value;
+        if (count < (chances - 1)){
+            if (num1 < num2) {
+                guesses.textContent += num1 + " ";
+                msg.innerHTML +=
+                    "<h4>Try Again! Your Guess Is Low.</h4>";
+                msg.classList.add("wrong");
+                count++;
+                input1.value = "";
+            }
+            else if (num1 > num2) {
+                guesses.textContent += num1 + " ";
+                msg.innerHTML +=
+                    "<h4>Try Again! Your Guess Is High.</h4>";
+                msg.classList.add("wrong");
+                count++;
+                input1.value = "";
+            }
+            else {
+                alert("Hurray! You Guessed Right. Congratulations You Won The Game");
+                guesses.textContent += num1 + " ";
+                msg.innerHTML +=
+                    `<br><h2>C-O-N-G-R-A-T-U-L-A-T-I-O-N-S! You Won The Game</h2><br><h3>You guessed in ${count} attempts.Keep it up and try to improve!</h3>`;
+                msg.classList.add("success");
+                input1.value = "";
+                gameOver();
+            }
+        }
+        else {
+            guesses.textContent += num1 + " ";
+            msg.innerHTML +=
+                "<h4>GAME OVER! You have lose all your chances.</h4>";
+            msg.classList.add("wrong");
+            input1.value = "";
+            gameOver();
+        }
+    });
+    let gameOver = function gameOver() {
+        btn.disabled = true;
+        input1.disabled = true;
+    }
+</script>
+
+</html>
