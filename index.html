@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint Tool</title>
+    <link href="paint.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Paint Tool</h1>
+    </header>
+
+    <canvas id="canvas" width="600" height="600"></canvas>
+    <div id="control">
+        <p
+            style="text-align: center; border: 2px solid white; border-radius: 2rem;  box-shadow: 5px 5px 5px 5px lightcoral; padding: 1rem 3rem; font-weight: bold;">
+            <label>Background : <input id="bgColor" type="color" value="white"></label>
+        </p>
+        <div class="options">
+            <p><label>Fill/Stroke <input id="fillBox" type="checkbox" checked="checked"></label></p>
+            <p><label>Fill Color : <input id="fillColor" type="color" value="black"></label></p>
+            <p><label>Stroke Color : <input id="strokeColor" type="color" value="black"></label></p>
+        </div>
+        <div class="options">
+            <p><label>Line Width <input id="lineWidth" type="range" step="1" min="1" max="100" value="5"></label></p>
+            <p><input type="radio" name="lineCap" value="round" checked="checked">round</p>
+            <p><input type="radio" name="lineCap" value="square" checked="checked">square</p>
+        </div>
+        <div class="options">
+            <p><input type="radio" name="shape" value="line" checked="checked">Line</p>
+            <p><input type="radio" name="shape" value="circle" checked="checked">Circle</p>
+            <p><input type="radio" name="shape" value="rectangle" checked="checked">Rectangle</p>
+            <p><input type="radio" name="shape" value="square" checked="checked">Square</p>
+        </div>
+        <p><input id="clearCanvas" type="button" value="Clear Canvas"></p>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
