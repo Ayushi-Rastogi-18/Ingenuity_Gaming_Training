@@ -1,0 +1,61 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow: hidden;
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20201026/pngtree-abstract-polygonal-space-background-blue-with-connection-lines-and-dots-for-image_439166.jpg");
+}
+h1{
+    font-size: 5rem;
+    color: lightcoral;
+    margin-left: 26rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: aqua;
+    font-family: 'Courier New', Courier, monospace;
+}
+canvas{
+    position: absolute;
+    /* min-height: 80vh; */
+    /* min-width: 10vw; */
+    top: 5rem;
+    left: 26rem;
+    border: 3px solid white;
+    cursor: crosshair;
+    box-shadow: 5px 5px 5px 5px aqua;
+}
+
+#control{
+    position: absolute;
+    top: 1.5rem;
+    left: 15px;
+    padding: 30px 50px;
+    border: 3px solid white;
+    background-color: aqua;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 5px 5px lightcoral;
+}
+.options{
+    border: 2px solid white;
+    margin-top: 1rem;
+    padding: 15px 25px;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 5px 5px lightcoral;
+    font-weight: bold;
+}
+p{
+    margin-top: 1px;
+}
+#clearCanvas{
+    margin-top: 20px;
+    margin-left: 35px;
+    padding: 1rem 3rem;
+    background-color: lightcoral;
+    border: 2px solid white;
+    border-radius: 2rem;
+    color:blue;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 5px 5px 5px 5px whitesmoke;
+}
