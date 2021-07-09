@@ -12,13 +12,13 @@ h1{
     color: lightcoral;
     margin-left: 26rem;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: aqua;
     font-family: 'Courier New', Courier, monospace;
 }
 canvas{
     position: absolute;
-    min-height: 80vh;
-    min-width: 65vw;
+    /* min-height: 80vh; */
+    /* min-width: 10vw; */
     top: 5rem;
     left: 26rem;
     border: 3px solid white;
