@@ -1,0 +1,29 @@
+{
+  "name": "audio_project",
+  "version": "1.1.1",
+  "description": "Audio Player",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "typescript"
+  ],
+  "author": "Ayushi Rastogi",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.4.1",
+    "css-loader": "^6.2.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "style-loader": "^3.2.1",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.5",
+    "webpack": "^5.46.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
