@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="audio_player">
+            <div id="audio_controls">
+                <button id="playpauseBtn"></button>
+                <input id="seekSlider" type="range" min="0" max="100" value="0" step="1">
+                <div id="timeBox">
+                    <span id="curTime">00.00</span> / <span id="durTime">00.00</span>
+                </div>
+                <button id="muteBtn"></button>
+                <input id="volumeSlider" type="range" min="0" max="100" value="20" step="1">
+                <button id="shuffleBtn"></button>
+            </div>
+            <h2 id="status"></h2>
+            <!-- Animation -->
+            <div id="mp3_player">
+                <div id="audioBox"></div>
+                <canvas id="canvas"></canvas>
+            </div>
+            <div id="playingTrack"></div>
+        </div>
+        <div id="trackBox">
+        </div>
+        
+    </div>
+    <!-- <script type="text/javascript" src="../final.js"></script> -->
+
+<script defer src="final.js"></script></body>
+
+</html>
