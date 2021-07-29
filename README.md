@@ -1,5 +1,2 @@
-# Ingenuity_Gaming_Training
-Hello! everyone
- Here I will upload my all assignments.
- Open to have suggestions.
-
+# COVID-19_TRACKER_HTML_CSS_JAVASCRIPT
+COVID-19 with HTML5, CSS3 and JavaScript
