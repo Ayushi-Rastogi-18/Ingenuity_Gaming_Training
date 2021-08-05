@@ -1,0 +1,34 @@
+export default{
+    baseurl:"./assets/images/",
+    data:[
+        {
+            key:"food",
+            img:"food.png"
+        },
+        {
+            key:"bg",
+            img:"ground.jpg"
+        },
+        {
+            key:"gameover",
+            img:"gameover.png"
+        },
+        {
+            key:"won",
+            img:"youwon.png"
+        },
+        {
+            key:"snacky",
+            img:"snake.png"
+        },
+        {
+            key:"soundon",
+            img:"speakeron.png"
+        },
+        {
+            key:"soundoff",
+            img:"speakeroff.png"
+        },
+        
+    ]
+}
