@@ -1,0 +1,21 @@
+export default{
+baseurl:"./assets/images/",
+data:[
+    {
+        key:"cover",
+        img:"front.png"
+    },
+    {
+        key:"cardfront",
+        img:"smileys.jpg"
+    },
+    {
+        key:"opening",
+        img:"bg11.jpg"
+    },
+    {
+        key:"ending",
+        img:"gameover1.jpg"
+    }
+]
+}
